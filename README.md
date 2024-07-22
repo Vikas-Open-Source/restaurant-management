@@ -9,17 +9,6 @@ A simple app that can be used to seamlessly manage your Menu, Inventory, and Ord
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Contributing](#contributing)
-- [License](#license)
-
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technology Choices](#technology-choices)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 

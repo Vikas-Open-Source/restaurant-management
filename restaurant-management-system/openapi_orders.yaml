@@ -17,7 +17,7 @@ paths:
         - in: query
           name: status
           schema:
-            $ref: '#/components/parameters/orderStatus'
+            $ref: '#/components/schemas/orderStatus'
           description: Filter orders by status
       responses:
         '200':
@@ -113,7 +113,7 @@ components:
         menuItem:
           type: string
         status:
-          $ref: '#/components/parameters/orderStatus'
+          $ref: '#/components/schemas/orderStatus'
         priority:
           type: string
           enum: 
@@ -126,7 +126,6 @@ components:
         updatedDate:
           type: string
           format: date-time
-  parameters:
     orderStatus:
       type: string
       enum: 

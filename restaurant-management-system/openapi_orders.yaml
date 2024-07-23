@@ -38,7 +38,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/NewOrder'
+              $ref: '#/components/schemas/Order'
       responses:
         '201':
           description: Order created successfully
@@ -79,7 +79,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateOrder'
+              $ref: '#/components/schemas/Order'
       responses:
         '200':
           description: Order updated successfully

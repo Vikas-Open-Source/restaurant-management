@@ -1,0 +1,144 @@
+openapi: 3.0.3
+info:
+  title: Menu Items API
+  description: API for managing menu items
+  version: 0.0.1
+servers:
+  - url: '{host}/api'
+    variables:
+      host:
+        default: http://localhost:8080
+paths:
+  /menuItems/v1:
+    get:
+      summary: Get all menu items
+      description: Retrieve a list of all menu items
+      parameters:
+        - in: query
+          required: false
+          name: itemAvailable
+          schema:
+            $ref: '#/components/schemas/MenuItem'
+          description: Filter menu by available items
+        - in: query
+          required: false
+          name: itemType
+          schema:
+            $ref: '#/components/schemas/itemType'
+          description: Filter menu by item type
+      responses:
+        '200':
+          description: A list of menu items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MenuItem'
+        '400':
+          $ref: '#/components/responses/badRequest'
+    post:
+      summary: Create a new menu item
+      description: Add a new item to the menu
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MenuItem'
+      responses:
+        '201':
+          description: Menu item created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MenuItem'
+  /menuItems/v1/{menuItemId}:
+    get:
+      summary: Get a menu item by ID
+      description: Retrieve a specific menu item by its ID
+      parameters:
+        - in: path
+          name: menuItemId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Menu item details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MenuItem'
+        '400':
+          $ref: '#/components/responses/badRequest'
+    put:
+      summary: Update a menu item
+      description: Update the details of an existing menu item
+      parameters:
+        - in: path
+          name: menuItemId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MenuItem'
+      responses:
+        '200':
+          description: Menu item updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MenuItem'
+        '400':
+          $ref: '#/components/responses/badRequest'
+    delete:
+      summary: Delete a menu item
+      description: Remove an item from the menu
+      parameters:
+        - in: path
+          name: menuItemId
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Menu item deleted successfully
+        '400':
+          $ref: '#/components/responses/badRequest'
+components:
+  schemas:
+    MenuItem:
+      type: object
+      properties:
+        menuItemId:
+          type: string
+        name:
+          type: string
+        stockRemaining:
+          type: integer
+        menuItemType:
+          $ref: '#/components/schemas/itemType'
+        createdDate:
+          type: string
+          format: date-time
+        updatedDate:
+          type: string
+          format: date-time
+    itemType:
+      type: string
+      enum: 
+        - VEGAN
+        - VEG
+        - NON-VEG
+  responses:
+    badRequest:
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            type: object

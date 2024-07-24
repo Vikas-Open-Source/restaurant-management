@@ -110,7 +110,9 @@ components:
       properties:
         id:
           type: string
-        menuItem:
+        menuItemId:
+          type: string
+        userId:
           type: string
         status:
           $ref: '#/components/schemas/orderStatus'

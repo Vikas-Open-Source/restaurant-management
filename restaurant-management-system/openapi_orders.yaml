@@ -15,6 +15,7 @@ paths:
       description: Retrieve a list of all orders
       parameters:
         - in: query
+          required: false
           name: status
           schema:
             $ref: '#/components/schemas/orderStatus'

@@ -9,20 +9,14 @@ servers:
       host:
         default: http://localhost:8080
 paths:
-  /menuItems/v1:
+  /items/v1:
     get:
       summary: Get all menu items
       description: Retrieve a list of all menu items
       parameters:
         - in: query
           required: false
-          name: itemAvailable
-          schema:
-            $ref: '#/components/schemas/MenuItem'
-          description: Filter menu by available items
-        - in: query
-          required: false
-          name: itemType
+          name: type
           schema:
             $ref: '#/components/schemas/itemType'
           description: Filter menu by item type
@@ -53,13 +47,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/MenuItem'
-  /menuItems/v1/{menuItemId}:
+  /items/v1/{id}:
     get:
       summary: Get a menu item by ID
       description: Retrieve a specific menu item by its ID
       parameters:
         - in: path
-          name: menuItemId
+          name: id
           required: true
           schema:
             type: string
@@ -77,7 +71,7 @@ paths:
       description: Update the details of an existing menu item
       parameters:
         - in: path
-          name: menuItemId
+          name: id
           required: true
           schema:
             type: string
@@ -101,7 +95,7 @@ paths:
       description: Remove an item from the menu
       parameters:
         - in: path
-          name: menuItemId
+          name: id
           required: true
           schema:
             type: string
@@ -115,13 +109,11 @@ components:
     MenuItem:
       type: object
       properties:
-        menuItemId:
+        id:
           type: string
         name:
           type: string
-        stockRemaining:
-          type: integer
-        menuItemType:
+        type:
           $ref: '#/components/schemas/itemType'
         createdDate:
           type: string

@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.vikas-open-source.restaurant-management-app' is invalid and this project uses 'com.vikas_open_source.restaurant_management_app' instead.
+* The original package name 'com.vikas-open-source.restaurant-management' is invalid and this project uses 'com.vikas_open_source.restaurant_management_app' instead.
 
 # Getting Started
 

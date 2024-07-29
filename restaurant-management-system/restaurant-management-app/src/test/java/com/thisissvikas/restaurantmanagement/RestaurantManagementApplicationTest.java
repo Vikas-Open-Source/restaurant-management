@@ -1,4 +1,4 @@
-package com.thisissvikas.restaurant_management_app;
+package com.thisissvikas.restaurantmanagement;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,5 +9,4 @@ public class RestaurantManagementApplicationTest {
     @Test
     void contextLoads() {
     }
-
 }

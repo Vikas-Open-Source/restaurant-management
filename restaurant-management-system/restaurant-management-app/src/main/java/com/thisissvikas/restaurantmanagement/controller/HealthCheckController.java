@@ -1,15 +1,14 @@
-package com.thisissvikas.restaurant_management_app.controller;
+package com.thisissvikas.restaurantmanagement.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloWorldController {
+public class HealthCheckController {
 
-    @GetMapping("/health")
-    public ResponseEntity<String> hello() {
+    @GetMapping("/health/v1")
+    public ResponseEntity<String> healthCheck() {
         return ResponseEntity.ok("Hello!");
     }
-
 }

@@ -1,4 +1,4 @@
-package com.thisissvikas.restaurant_management_app;
+package com.thisissvikas.restaurantmanagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,4 @@ public class RestaurantManagementApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RestaurantManagementApplication.class, args);
 	}
-
 }

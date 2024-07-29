@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: restaurant-management-app
+server:
+  servlet:
+    context-path: /api

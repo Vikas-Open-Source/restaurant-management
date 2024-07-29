@@ -1,4 +1,4 @@
-package com.vikas_open_source.restaurant_management_app;
+package com.thisissvikas.restaurant_management_app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -18,8 +18,8 @@ services:
       timeout: 10s
       retries: 5
 
-  restaurant-management-app:
-    image: docker.io/thisissvikas/restaurant-management-app:latest
+  restaurant-management:
+    image: docker.io/thisissvikas/restaurant-management:latest
     depends_on:
       postgres:
         condition: service_healthy

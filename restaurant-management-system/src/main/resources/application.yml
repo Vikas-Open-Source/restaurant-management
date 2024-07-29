@@ -1,6 +1,7 @@
 spring:
   application:
-    name: restaurant-management-app
+    name: restaurant-management
 server:
   servlet:
     context-path: /api
+  port: 8080

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - RestaurantManagementApplicationTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>RestaurantManagementApplicationTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.thisissvikas.restaurant_management_app.html">com.thisissvikas.restaurant_management_app</a> &gt; RestaurantManagementApplicationTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.346s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">contextLoads()</td>
+<td class="success">0.346s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>14:54:53.881 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.thisissvikas.restaurant_management_app.RestaurantManagementApplicationTest]: RestaurantManagementApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:54:53.940 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.thisissvikas.restaurant_management_app.RestaurantManagementApplication for test class com.thisissvikas.restaurant_management_app.RestaurantManagementApplicationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-07-29T14:54:54.121+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] .t.r.RestaurantManagementApplicationTest : Starting RestaurantManagementApplicationTest using Java 21.0.4 with PID 5306 (started by Shubhaangi in /Users/Shubhaangi/development/restaurant-management/restaurant-management-system/restaurant-management-app)
+2024-07-29T14:54:54.122+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] .t.r.RestaurantManagementApplicationTest : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-07-29T14:54:54.371+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-29T14:54:54.381+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-07-29T14:54:54.613+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-29T14:54:54.699+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:773d2a12-3ad6-4a36-8d59-963e6d561e2e user=SA
+2024-07-29T14:54:54.700+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-29T14:54:54.719+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:773d2a12-3ad6-4a36-8d59-963e6d561e2e (H2 2.2)
+2024-07-29T14:54:54.722+05:30  WARN 5306 --- [restaurant-management-app] [    Test worker] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024-07-29T14:54:54.729+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table &quot;PUBLIC&quot;.&quot;flyway_schema_history&quot; does not exist yet
+2024-07-29T14:54:54.729+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.003s)
+2024-07-29T14:54:54.729+05:30  WARN 5306 --- [restaurant-management-app] [    Test worker] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-07-29T14:54:54.732+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table &quot;PUBLIC&quot;.&quot;flyway_schema_history&quot; ...
+2024-07-29T14:54:54.749+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema &quot;PUBLIC&quot;: &lt;&lt; Empty Schema &gt;&gt;
+2024-07-29T14:54:54.752+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] o.f.core.internal.command.DbMigrate      : Schema &quot;PUBLIC&quot; is up to date. No migration necessary.
+2024-07-29T14:54:54.797+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-29T14:54:54.822+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-29T14:54:54.836+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-29T14:54:54.955+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-29T14:54:55.112+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-29T14:54:55.114+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T14:54:55.182+05:30  WARN 5306 --- [restaurant-management-app] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-29T14:54:55.370+05:30  INFO 5306 --- [restaurant-management-app] [    Test worker] .t.r.RestaurantManagementApplicationTest : Started RestaurantManagementApplicationTest in 1.364 seconds (process running for 1.964)
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>WARNING: A Java agent has been loaded dynamically (/Users/Shubhaangi/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.18/417558ea01fe9f0e8a94af28b9469d281c4e3984/byte-buddy-agent-1.14.18.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.8</a> at 29-Jul-2024, 2:54:55 pm</p>
+</div>
+</div>
+</body>
+</html>

@@ -34,4 +34,4 @@ jobs:
         run: chmod +x restaurant-management-system/gradlew
 
       - name: Build with Gradle
-        run: ./restaurant-management-system/gradlew clean build
+        run: restaurant-management-system/gradlew clean build

@@ -69,7 +69,7 @@ To use this application, you need to have Java 21 and Gradle installed on your s
 
 ## Configuration
 
-Ensure that your PostgreSQL database is up and running. Update the database configurations in the `application.properties` file to match your setup.
+Ensure that your PostgreSQL database is up and running. Update the database configurations in the `application.yml` file to match your setup.
 
 ## Contributing
 

@@ -1,0 +1,42 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Cache Gradle packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.gradle/caches
+          key: ${{ runner.os }}-gradle-${{ hashFiles('restaurant-management-system/**/*.gradle*', 'restaurant-management-system/**/gradle-wrapper.properties') }}
+          restore-keys: ${{ runner.os }}-gradle
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: "21"
+          distribution: "adopt"
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x restaurant-management-system/gradlew
+
+      - name: Build with Gradle
+        working-directory: restaurant-management-system
+        run: ./gradlew clean build
+
+      - name: Build the Docker image
+        working-directory: restaurant-management-system
+        run: docker build . --file Dockerfile --tag thisissvikas/restaurant-management:$(date +%s)
+
+      - name: Push the Docker image
+        run: docker push thisissvikas/restaurant-management:$(date +%s)

@@ -32,7 +32,7 @@ jobs:
 
       - name: Build with Gradle
         working-directory: restaurant-management-system
-        run: ./gradlew clean build
+        run: ./gradlew clean build -Dspring.profiles.active=ci
 
       - name: Log in to Docker Hub
         run: echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin

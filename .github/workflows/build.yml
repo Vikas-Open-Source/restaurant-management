@@ -5,8 +5,8 @@ on:
     branches:
       - main
   schedule:
-  # every night
-  - cron: '0 0 * * *'
+    # every night
+    - cron: "0 0 * * *"
 
 jobs:
   build:
@@ -27,12 +27,12 @@ jobs:
       - name: Set up JDK 21
         uses: actions/setup-java@v3
         with:
-          java-version: '21'
-          distribution: 'adopt'
+          java-version: "21"
+          distribution: "adopt"
 
       - name: Grant execute permission for gradlew
         run: chmod +x restaurant-management-system/gradlew
 
       - name: Build with Gradle
         working-directory: restaurant-management-system
-        run: ./gradlew clean build
+        run: ./gradlew clean build -Dspring.profiles.active=ci

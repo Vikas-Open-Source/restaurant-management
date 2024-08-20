@@ -8,4 +8,4 @@ ARG JAR_FILE=/build/libs/restaurant-management-0.0.1-SNAPSHOT.jar
 
 COPY ${JAR_FILE} /app/restaurant-management.jar
 
-ENTRYPOINT ["java", "-jar", "/restaurant-management.jar"]
+ENTRYPOINT ["java", "-jar", "restaurant-management.jar"]

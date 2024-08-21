@@ -1,13 +1,6 @@
 spring:
   application:
     name: restaurant-management
-  datasource:
-    url: jdbc:postgresql://localhost:5432/restaurantdb
-    username: postgres
-    password: postgres
-    driver-class-name: org.postgresql.Driver
-  flyway:
-    default_schema: restaurant_management
 
 server:
   servlet:
@@ -24,6 +17,9 @@ spring:
     url: jdbc:postgresql://localhost:5432/restaurantdb
     username: postgres
     password: postgres
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    default_schema: restaurant_management
 
 ---
 # Profile for CI

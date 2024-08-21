@@ -1,12 +1,9 @@
-name: Build
+name: Deploy
 
 on:
-  pull_request:
+  push:
     branches:
       - main
-  schedule:
-    # every night
-    - cron: "0 0 * * *"
 
 jobs:
   build:
@@ -36,3 +33,13 @@ jobs:
       - name: Build with Gradle
         working-directory: restaurant-management-system
         run: ./gradlew clean build -Dspring.profiles.active=ci
+
+      - name: Log in to Docker Hub
+        run: echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+
+      - name: Build the Docker image
+        working-directory: restaurant-management-system
+        run: docker build . --file Dockerfile --tag thisissvikas/restaurant-management:latest
+
+      - name: Push the Docker image
+        run: docker push thisissvikas/restaurant-management:latest

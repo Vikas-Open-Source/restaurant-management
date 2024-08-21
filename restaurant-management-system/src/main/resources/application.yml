@@ -13,3 +13,21 @@ server:
   servlet:
     context-path: /api
   port: 8080
+
+---
+# Profile for local development
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    url: jdbc:postgresql://localhost:5432/restaurantdb
+    username: postgres
+    password: postgres
+
+---
+# Profile for CI
+spring:
+  config:
+    activate:
+      on-profile: ci

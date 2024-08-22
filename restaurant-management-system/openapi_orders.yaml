@@ -134,7 +134,7 @@ components:
       enum: 
         - RECEIVED
         - PAYMENT_COMPLETED
-        - UNDER_PREPERATION
+        - UNDER_PREPARATION
         - READY
         - DISPATCHED
         - DELIVERED

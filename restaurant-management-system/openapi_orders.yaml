@@ -28,7 +28,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Order'
+                  $ref: '#/components/schemas/OrderV1'
         '400':
           $ref: '#/components/responses/badRequest'
     post:
@@ -39,14 +39,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Order'
+              $ref: '#/components/schemas/OrderV1'
       responses:
         '201':
           description: Order created successfully
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Order'
+                $ref: '#/components/schemas/OrderV1'
   /orders/v1/{orderId}:
     get:
       summary: Get an order by ID
@@ -63,7 +63,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Order'
+                $ref: '#/components/schemas/OrderV1'
         '400':
           $ref: '#/components/responses/badRequest'
     put:
@@ -80,14 +80,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Order'
+              $ref: '#/components/schemas/OrderV1'
       responses:
         '200':
           description: Order updated successfully
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Order'
+                $ref: '#/components/schemas/OrderV1'
         '400':
           $ref: '#/components/responses/badRequest'
     delete:
@@ -106,7 +106,7 @@ paths:
           $ref: '#/components/responses/badRequest'
 components:
   schemas:
-    Order:
+    OrderV1:
       type: object
       properties:
         id:

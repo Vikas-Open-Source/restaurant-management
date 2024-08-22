@@ -28,7 +28,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/MenuItem'
+                  $ref: '#/components/schemas/MenuItemV1'
         '400':
           $ref: '#/components/responses/badRequest'
     post:
@@ -39,14 +39,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/MenuItem'
+              $ref: '#/components/schemas/MenuItemV1'
       responses:
         '201':
           description: Menu item created successfully
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MenuItem'
+                $ref: '#/components/schemas/MenuItemV1'
   /items/v1/{id}:
     get:
       summary: Get a menu item by ID
@@ -63,7 +63,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MenuItem'
+                $ref: '#/components/schemas/MenuItemV1'
         '400':
           $ref: '#/components/responses/badRequest'
     put:
@@ -80,14 +80,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/MenuItem'
+              $ref: '#/components/schemas/MenuItemV1'
       responses:
         '200':
           description: Menu item updated successfully
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MenuItem'
+                $ref: '#/components/schemas/MenuItemV1'
         '400':
           $ref: '#/components/responses/badRequest'
     delete:
@@ -106,7 +106,7 @@ paths:
           $ref: '#/components/responses/badRequest'
 components:
   schemas:
-    MenuItem:
+    MenuItemV1:
       type: object
       properties:
         id:
